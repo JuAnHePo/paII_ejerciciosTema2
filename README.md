@@ -1,1 +1,1 @@
-# paII_ejerciciosTema2
+# Ejercicios del Tema 2 de Programación Avanzada II
