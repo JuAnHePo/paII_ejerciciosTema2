@@ -1,5 +1,5 @@
 object ejercicio4 {
-  class bankAccount {
+  private class BankAccount {
     private var saldo = 0
 
     def depositarDinero(cantidad: Int): Unit = {
@@ -16,7 +16,7 @@ object ejercicio4 {
   }
 
   @main def mainBankAccount(): Unit = {
-    val cuenta = bankAccount()
+    val cuenta = BankAccount()
     cuenta.verificarSaldo()
     cuenta.depositarDinero(100)
     cuenta.verificarSaldo()
