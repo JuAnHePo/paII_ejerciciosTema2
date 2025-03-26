@@ -5,8 +5,7 @@ object ejercicio13 {
     def go(conj: Set[A]): Set[Set[A]] = {
       if conj.isEmpty then Set(Set())
       else
-        val elem = conj.head
-        go(conj.tail) ++ go(conj.tail).map(_ + elem)
+        go(conj.tail) ++ go(conj.tail).map(_ + conj.head)
     }
 
     go(conj)
@@ -17,9 +16,7 @@ object ejercicio13 {
     def go(conjunto: Set[A], acc: Set[Set[A]]): Set[Set[A]] = {
       if conjunto.isEmpty then acc
       else
-        val head = conjunto.head
-        val nuevosSubconjutos = acc.map(_ + head)
-        go(conjunto.tail, acc ++ nuevosSubconjutos)
+        go(conjunto.tail, acc ++ acc.map(_ + conjunto.head))
     }
 
     go(conjunto, Set(Set()))
