@@ -1,6 +1,6 @@
 object ejercicio24 {
-  def unzip(lista: List[(Int, Char)]): (List[Int], List[Char]) = {
-    def go(lista: List[(Int, Char)]): (List[Int], List[Char]) = {
+  def unzip[A,B](lista: List[(A, B)]): (List[A], List[B]) = {
+    def go(lista: List[(A, B)]): (List[A], List[B]) = {
       if lista.isEmpty then (Nil, Nil)
       else
         val headInt = lista.head(0)
