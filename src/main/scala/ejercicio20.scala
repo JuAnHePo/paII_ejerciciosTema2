@@ -1,5 +1,8 @@
+import scala.annotation.tailrec
+
 object ejercicio20 {
   def sumaCuadrados(lista: List[Int]): Int = {
+    @tailrec
     def go(lista: List[Int], acc: Int): Int = {
       if lista.isEmpty then acc
       else go(lista.tail, acc + lista.head)
