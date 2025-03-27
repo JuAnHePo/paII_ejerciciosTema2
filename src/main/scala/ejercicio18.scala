@@ -9,9 +9,9 @@ object ejercicio18 {
     val lista = 1 :: 2 :: 3 :: 4 :: Nil
     val listaVacia = Nil
     try {
-      println(last(lista).get)
-      println(last(listaVacia).get)
+      println(last(lista))
+      println(last(listaVacia))
     } catch
-      case e: NoSuchElementException => println("Error. La lista está vacía.")
+      case e: NoSuchElementException => println(None)
   }
 }
